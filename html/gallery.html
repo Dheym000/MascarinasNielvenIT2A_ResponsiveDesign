@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <title>Black Bull</title>
+</head>
+<body>
+    <div class="bounty-container">
+        <a href="../index.html">
+            <button style="background-color: transparent; border: 1px solid #ccc; border-radius: 5px; outline: none; cursor: pointer; padding: 5px 10px; font-size: inherit; color: inherit; text-decoration: none; margin-left: 10px;">
+              Go back
+            </button>
+          </a>
+          <style>
+            button:hover {
+              background-color: black;
+              color: white;
+              border-color: white;
+            }
+          </style>
+        <h1>Black Bull</h1>
+        <div class="line"></div>
+        <div class="image-container">
+            <div class="image"><img src="../img/yami.jfif" alt=""></div>
+            <div class="image"><img src="../img/asta.jfif" alt=""></div>
+            <div class="image"><img src="../img/magna.jfif" alt=""></div>
+            <div class="image"><img src="../img/finral.jfif" alt=""></div>
+            <div class="image"><img src="../img/henry.jfif" alt=""></div>
+            <div class="image"><img src="../img/luck.jfif" alt=""></div>
+            <div class="image"><img src="../img/charmy.jfif" alt=""></div>
+            <div class="image"><img src="../img/noell.jfif" alt=""></div>
+            <div class="image"><img src="../img/vanessa.jfif" alt=""></div>
+            <div class="image"><img src="../img/secre.jfif" alt=""></div>
+        </div>
+
+        <div class="popup">
+            <span>&times;</span>
+            <img src="../img/asta.jfif" alt="">
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2023 Niel <br> Never giving up is my magic. All rights reserved.</p>
+      </footer>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

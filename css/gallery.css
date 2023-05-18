@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.bounty-container{
+    position: relative;
+    min-height: 109vh;
+    background: linear-gradient(to top,  #0321bb8f, #00545dd7);
+    padding-top: 20px;
+}
+
+.bounty-container a{
+    color: #000;
+    margin: 30px;
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.bounty-container a:hover{
+    color: #fff;
+}
+
+.bounty-container h1{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.bounty-container .line{
+    width: 500px;
+    height: 4px;
+    background: #000;
+    margin: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.bounty-container .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.bounty-container .image-container .image{
+    height: 480px;
+    width: 350px;
+    border: 3px solid #F16767;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bounty-container .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.bounty-container .image-container .image:hover img{
+    filter: brightness(80%);
+}
+
+.bounty-container .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.bounty-container .popup span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: inherit;
+}
+
+.bounty-container .popup img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #F16767;
+    width: 450px;
+    object-fit: cover;
+    transition: ease-in-out .5s;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*footer*/
+footer{
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p{
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+@media (max-width: 768px){s
+    .bounty-container .popup img{
+        width: 95%;
+    }
+}
